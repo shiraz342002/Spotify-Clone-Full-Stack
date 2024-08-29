@@ -2,11 +2,14 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
+import {BrowserRouter} from "react-router-dom"
 
-
-// https://www.youtube.com/watch?v=KdGfhSpT6pc&t=567s
+// https://youtu.be/KdGfhSpT6pc?t=2553
 createRoot(document.getElementById('root')).render(
+
   <StrictMode>
+  <BrowserRouter>
     <App />
+  </BrowserRouter>
   </StrictMode>,
 )
