@@ -4,16 +4,14 @@ import App from './App.jsx'
 import './index.css'
 import {BrowserRouter} from "react-router-dom"
 import PlayerContextProvider from './context/PlayerContext.jsx'
-
-
-
+// https://youtu.be/KdGfhSpT6pc?t=6598
 createRoot(document.getElementById('root')).render(
-
   <StrictMode>
-  <BrowserRouter>
-  <PlayerContextProvider>
+   <BrowserRouter>
+     <PlayerContextProvider>
     <App />
-  </PlayerContextProvider>
+     </PlayerContextProvider>
   </BrowserRouter>
-  </StrictMode>,
+  </StrictMode>
+
 )
