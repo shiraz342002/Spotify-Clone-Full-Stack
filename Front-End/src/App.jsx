@@ -10,8 +10,8 @@ const App = () => {
         <Display/>
       </div>
       <Player/>
+      <audio preload='auto' src=""></audio>
     </div>
   )
 }
-
 export default App
