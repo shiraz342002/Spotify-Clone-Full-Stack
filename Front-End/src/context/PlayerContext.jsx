@@ -27,6 +27,13 @@ const PlayerContextProvider=(props)=>{
         audioRef.current.pause();
         setPlayStatus(false)
     }
+
+    const playWithId=async (id)=>{
+        setTrack(songsData[id])
+        await audioRef.current.play()
+        setPlayStatus(true)
+    }
+
     useEffect(()=>{
         setTimeout(() => {
             audioRef.current.ontimeupdate=()=>{
@@ -53,7 +60,8 @@ const PlayerContextProvider=(props)=>{
         playStatus,setPlayStatus,
         time,setTime,
         play,
-        pause
+        pause,
+        playWithId
     }
     return(
         <PlayerContext.Provider value={contextValue}>
