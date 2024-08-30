@@ -14,17 +14,29 @@ const PlayerContextProvider=(props)=>{
             minute:0,
         },
         totalTime:{
-
+            second:0,
+            minute:0
         }
     }
 )
+    const play=()=>{
+        audioRef.current.play();
+        setPlayStatus(true)
+    }
+    const pause=()=>{
+        audioRef.current.pause();
+        setPlayStatus(false)
+    }
+        
     const contextValue={
         audioRef,
         seekBar,
         seekBg,
         track,setTrack,
         playStatus,setPlayStatus,
-        time,setTime
+        time,setTime,
+        play,
+        pause
     }
     return(
         <PlayerContext.Provider value={contextValue}>
