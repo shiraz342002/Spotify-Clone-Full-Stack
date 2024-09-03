@@ -2,9 +2,7 @@ import React, { useContext } from 'react'
 import {assets} from "../assets/frontend-assets/assets"
 import { PlayerContext } from '../context/PlayerContext'
 const Player = () => {
-
-  const {seekBar,seekBg,play,pause,playStatus,track,time} = useContext(PlayerContext)
-
+  const {seekBar,seekBg,play,pause,playStatus,track,time,next,previous} = useContext(PlayerContext)
   return (
     <div className='h-[10%] flex bg-black items-center justify-between text-white px-4 '>
       <div className='hidden lg:flex item-center gap-4 '>
@@ -17,12 +15,12 @@ const Player = () => {
       <div className='flex flex-col items-center gap-1 m-auto'>
         <div className="flex gap-4">
             <img className='cursor-pointer w-4' src={assets.shuffle_icon} alt="" />
-            <img className='cursor-pointer w-4' src={assets.prev_icon} alt="" />
+            <img onClick={()=>previous()} className='cursor-pointer w-4' src={assets.prev_icon} alt="" />
             {
               playStatus?<img onClick={pause}  className='cursor-pointer w-4' src={assets.pause_icon} alt="" />:
               <img onClick={play}  className='cursor-pointer w-4' src={assets.play_icon} alt="" />
             }
-            <img className='cursor-pointer w-4' src={assets.next_icon} alt="" />
+            <img onClick={()=>next()} className='cursor-pointer w-4' src={assets.next_icon} alt="" />
             <img className='cursor-pointer w-4' src={assets.loop_icon} alt="" />
         </div>
         <div className="flex items-center gap-5">
