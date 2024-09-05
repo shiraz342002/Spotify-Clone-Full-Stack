@@ -10,7 +10,7 @@ try{
     const audioUpload=await cloudinary.uploader.upload(audioFile.path,{resource_type:"video"})
     const imageUpload=await cloudinary.uploader.upload(imageFile.path,{resource_type:"image"})
     const duration = `${Math.floor(audioUpload.duration/60)}:${Math.floor(audioUpload.duration%60)}`;
-   const songData={
+    const songData={
     name,
     desc,
     album,
@@ -23,10 +23,28 @@ try{
     res.json({success:true,message:"Song Added"})
 }catch(err){
 res.json({success:false})
-
 }
 }
 const listSong=async(req,res)=>{
-
+try{
+    const allsongs = await songModel.find()
+    res.json({
+        success:true,
+        songs:allsongs
+    })
+}catch(err){
+    res.json({success:false})
 }
-export {addSong,listSong}
+}
+const removeSong=async(req,res)=>{
+    try{
+         await songModel.findByIdAndDelete(req.params.id)
+         res.json({
+            success:true,
+            message:"Song Deleted"
+        })
+    }catch(err){
+        res.json({success:false})        
+    }
+}
+export {addSong,listSong,removeSong}
