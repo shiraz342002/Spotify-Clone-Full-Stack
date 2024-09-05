@@ -8,3 +8,7 @@ const songSchema=new mongoose.Schema({
     file:{type:String,required:true},
     duration:{type:String,required:true},
 })
+
+const songModel=mongoose.model("song",songSchema)
+
+export default songModel
