@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { assets } from '../assets/assets'
 import axios from "axios"
 import { url } from '../App';
@@ -11,6 +11,25 @@ const AddSong = () => {
   const [album, setAlbum] = useState("none");
   const [loading, setLoading] = useState(false); 
   const [albumData, setAlbumData] = useState([]);
+
+    const fetchAlbums = async () => {
+      try {
+        const response = await axios.get(`${url}/api/album/list`)
+        
+        if (response.data.success) {
+          setAlbumData(response.data.albums)
+        }
+      } catch (error) {
+        toast.error("Some Error occured")
+      }
+      console.log(albumData);
+      
+    }
+    
+    useEffect(() => {
+      fetchAlbums()
+    }, [])
+
 
   const onSubmitHandler = async (e) => {
     e.preventDefault();
@@ -74,8 +93,13 @@ const AddSong = () => {
 
       <div className='flex flex-col gap-2'>
         <p>Album</p>
-        <select onChange={(e) => setAlbum(e.target.value)} defaultValue={album} className='bg-transparent outline-green-600 border-2 border-gray-400 p-2.5 w-[150px]'>
+        <select onChange={(e) => setAlbum(e.target.value)} defaultValue={album} className='bg-transparent outline-green-600 border-2 border-gray-400 p-2.5 w-[250px]'>
           <option value="none">None</option>
+          {
+            albumData.map((item,index)=>(
+              <option key={index} value={item.name}>{item.name}</option>
+            ))
+          }
         </select>
       </div>
       <button className='text-base bg-black text-white py-4 px-2 cursor-pointer w-[150px]' type='submit'>

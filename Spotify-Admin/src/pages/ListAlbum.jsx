@@ -8,8 +8,6 @@ const ListAlbum = () => {
   const fetchAlbums = async () => {
     try {
       const response = await axios.get(`${url}/api/album/list`)
-      console.log(response);
-      
       if (response.data.success) {
         setData(response.data.albums)
       }
@@ -19,7 +17,7 @@ const ListAlbum = () => {
   }
   useEffect(() => {
     fetchAlbums()
-  }, [])
+  }, [data])
 
   const removeAlbum = async (id) => {
     
@@ -51,7 +49,7 @@ const ListAlbum = () => {
                 <img src={item.image} className='w-[80px] ' alt="" />
                 <p>{item.name}</p>
                 <p>{item.desc}</p>
-                <p>{item.bgColor}</p>
+                <input type="color" value={item.bgColor} disabled/>
                 <p onClick={() => removeAlbum(item._id)} className='font-semibold text-lg cursor-pointer'>x</p>
               </div>
             )

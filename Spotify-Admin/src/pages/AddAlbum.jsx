@@ -22,14 +22,14 @@ const AddAlbum = () => {
       formData.append('image', image)
       formData.append('bgColor', bgColor)
 
-      const response = await axios.post(`${url}/api/album/add`,formData)
+      const response = await axios.post(`${url}/api/album/add`, formData)
       if (response.data.success) {
         toast.success("Album Added Successfully")
         setImage(false);
         setName("");
         setDesc("");
         setBgColor("");
-      }else{
+      } else {
         toast.error("Something Went Wrong")
       }
     } catch (error) {
@@ -65,7 +65,9 @@ const AddAlbum = () => {
         <div className='flex flex-col gap-2.5'>
           <p>Album Color Theme</p>
           <p>Use <a target='_blank' className='text-based font-bold text-blue-600' href="https://coolors.co/palettes/trending">Color Theme Picker</a> or go with custom Background color</p>
+
           <input
+            value={bgColor}
             onChange={(e) => {
               let value = e.target.value;
               if (value && !value.startsWith('#')) {
@@ -76,7 +78,14 @@ const AddAlbum = () => {
             className='bg-transparent outline-green-600 border-2 p-2.5 border-gray-400 w-[max(40vw,250px)]'
             placeholder='Type here'
             type="text"
-          />      </div>
+          />
+
+          <input
+            type="color"
+            value={bgColor} 
+            onChange={(e) => setBgColor(e.target.value)}
+          />
+        </div>
         <button className='text-base bg-black text-white py-4 px-2 cursor-pointer w-[150px]' type='submit'>
           Add Album
         </button>

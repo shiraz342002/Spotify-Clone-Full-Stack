@@ -4,7 +4,6 @@ import App from './App.jsx'
 import './index.css'
 import {BrowserRouter} from "react-router-dom"
 import PlayerContextProvider from './context/PlayerContext.jsx'
-// https://youtu.be/KdGfhSpT6pc?t=9418
 createRoot(document.getElementById('root')).render(
   <StrictMode>
    <BrowserRouter>

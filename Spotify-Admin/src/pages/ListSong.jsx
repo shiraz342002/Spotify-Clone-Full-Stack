@@ -17,7 +17,7 @@ const ListSong = () => {
   }
   useEffect(() => {
     fetchSongs()
-  }, [])
+  }, [data])
 
   const removeSong = async (id) => {
     
