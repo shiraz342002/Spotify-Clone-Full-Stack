@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { assets } from '../assets/assets';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink} from 'react-router-dom';
 const SideBar = () => {
- 
   return (
     <div className="bg-[#003A10] min-h-screen p-4 sm:pl-6">
       <div className="mb-6">
