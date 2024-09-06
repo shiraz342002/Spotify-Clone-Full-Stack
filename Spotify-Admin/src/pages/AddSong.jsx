@@ -37,10 +37,8 @@ const AddSong = () => {
       toast.error("Some Error Occured")
     }
     setLoading(false)
-   
 
   }
-
   return loading ? (
     <div className='grid place-items-center min-h-[80vh]'>
       <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-green-500"></div>
@@ -80,7 +78,6 @@ const AddSong = () => {
           <option value="none">None</option>
         </select>
       </div>
-
       <button className='text-base bg-black text-white py-4 px-2 cursor-pointer w-[150px]' type='submit'>
         Add Song
       </button>
