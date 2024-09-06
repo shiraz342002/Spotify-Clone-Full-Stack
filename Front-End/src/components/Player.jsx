@@ -3,7 +3,7 @@ import {assets} from "../assets/frontend-assets/assets"
 import { PlayerContext } from '../context/PlayerContext'
 const Player = () => {
   const {seekBar,seekBg,play,pause,playStatus,track,time,next,previous,seekSong} = useContext(PlayerContext)
-  return (
+  return track? (
     <div className='h-[10%] flex bg-black items-center justify-between text-white px-4 '>
       <div className='hidden lg:flex item-center gap-4 '>
       <img className='w-12' src={track.image} alt="" />
@@ -43,7 +43,7 @@ const Player = () => {
         <img className='w-4' src={assets.zoom_icon} alt="" />
       </div>
     </div>
-  )
+  ):null
 }
 
 export default Player

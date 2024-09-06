@@ -1,11 +1,12 @@
 import React from 'react'
 import Navbar from './Navbar'
-import { albumsData } from '../assets/frontend-assets/assets'
 import AlbumItem from './AlbumItem'
-import { songsData } from '../assets/frontend-assets/assets'
 import SongItem from './SongItem'
+import { useContext } from 'react'
+import { PlayerContext } from '../context/PlayerContext'
 
 const DisplayHome = () => {
+  const {songsData,albumsData} =useContext(PlayerContext)
   return (
     <>
       <Navbar/>
@@ -13,7 +14,7 @@ const DisplayHome = () => {
       <h1 className='my-5 font-bold text-2xl'>Featured Charts</h1>
       <div className='flex overflow-auto'>
         {
-          albumsData.map((item,index)=>(<AlbumItem key={index} image={item.image} name={item.name} desc={item.desc} id={item.id}/>))
+          albumsData.map((item,index)=>(<AlbumItem key={index} image={item.image} name={item.name} desc={item.desc} id={item._id}/>))
         }
       </div>
       </div>
@@ -22,7 +23,7 @@ const DisplayHome = () => {
       <div className='flex overflow-auto'>
         {
           songsData.map((item,index)=>(
-            <SongItem key={index} image={item.image} name={item.name} desc={item.desc} id={item.id}/>
+            <SongItem key={index} image={item.image} name={item.name} desc={item.desc} id={item._id}/>
           ))
         }
       </div>

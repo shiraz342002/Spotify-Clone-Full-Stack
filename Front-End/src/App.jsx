@@ -4,15 +4,21 @@ import Player from './components/Player'
 import Display from "./components/Display"
 import { PlayerContext } from './context/PlayerContext'
 const App = () => {
-  const {audioRef,track} =useContext(PlayerContext)
+  const {audioRef,track,songsData} =useContext(PlayerContext)
   return (
     <div className='h-screen bg-black'>
+    {
+      songsData.length!==0?
+      <>
       <div className='h-[90%] flex'>
         <SideBar/>  
         <Display/>
       </div>
       <Player/>
-      <audio ref={audioRef} preload='auto' src={track.file}></audio>
+      
+      </>:null
+    }
+      <audio ref={audioRef} preload='auto' src={track?track.file:""}></audio>
     </div>
   )
 }
