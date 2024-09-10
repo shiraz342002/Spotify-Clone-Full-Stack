@@ -3,6 +3,7 @@ import { assets } from '../assets/assets'
 import axios from "axios"
 import { url } from '../App';
 import { toast } from 'react-toastify';
+import { Button } from 'flowbite-react';
 
 const AddSong = () => {
   const [image, setImage] = useState(false);
@@ -12,6 +13,25 @@ const AddSong = () => {
   const [album, setAlbum] = useState("none");
   const [loading, setLoading] = useState(false); 
   const [albumData, setAlbumData] = useState([]);
+  const validateForm = () => {
+    if (!name) {
+      toast.error('Song name is required');
+      return false;
+    }
+    if (!desc) {
+      toast.error('Song description is required');
+      return false;
+    }
+    if (!image) {
+      toast.error('Song cover image is required');
+      return false;
+    }
+    if (!song) {
+      toast.error('song audio is required');
+      return false;
+    }
+    return true;
+  };
 
     const fetchAlbums = async () => {
       try {
@@ -31,6 +51,7 @@ const AddSong = () => {
     }, [])
   const onSubmitHandler = async (e) => {
     e.preventDefault();
+    if (!validateForm()) return;
     setLoading(true);
     try {
       const formData = new FormData()
@@ -97,9 +118,13 @@ const AddSong = () => {
           }
         </select>
       </div>
-      <button className='text-base bg-black text-white py-4 px-2 cursor-pointer w-[150px]' type='submit'>
-        Add Song
-      </button>
+      <Button
+          gradientMonochrome="success"
+          className="mb-10 text-lg py-3 px-2 cursor-pointer w-[150px]"
+          type="submit"
+        >
+          Add Song
+        </Button>
     </form>
   )
 }
