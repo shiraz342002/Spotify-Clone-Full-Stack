@@ -28,6 +28,7 @@ const DisplayHome = () => {
         }
       </div>
       </div>
+      
     </>
   )
 }

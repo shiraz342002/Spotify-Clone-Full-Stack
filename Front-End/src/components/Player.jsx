@@ -4,12 +4,10 @@ import { PlayerContext } from '../context/PlayerContext'
 import { useState } from 'react'
 import { toast } from 'react-toastify'
 const Player = () => {
-
-
   const {seekBar,seekBg,play,pause,playStatus,track,time,next,previous,seekSong,audioRef,volumeBgRef} = useContext(PlayerContext)
   const [muted, setMuted] = useState(false);
   const [volume, setVolume] = useState(1);
-
+  
   const toggleMute=()=>{
     if(muted){
       setVolume(1)
@@ -44,6 +42,7 @@ const Player = () => {
     }
   };
   
+  
   return track? (
     <div className='h-[10%] flex bg-black items-center justify-between text-white px-4 '>
       <div className='hidden lg:flex item-center gap-4 '>
@@ -62,7 +61,7 @@ const Player = () => {
               <img onClick={play}  className='cursor-pointer w-4' src={assets.play_icon} alt="" />
             }
             <img onClick={()=>next()} className='cursor-pointer w-4' src={assets.next_icon} alt="" />
-            <img className='cursor-pointer w-4' src={assets.loop_icon} alt="" />
+            <img onClick={()=>loop()} className='cursor-pointer w-4' src={assets.loop_icon} alt="" />
         </div>
         <div className="flex items-center gap-5">
             <p>{time.currentTime.minute}:{time.currentTime.second}</p>

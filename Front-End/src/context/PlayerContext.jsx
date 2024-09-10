@@ -20,6 +20,8 @@ const PlayerContextProvider=(props)=>{
 
     const [track,setTrack]=useState(songsData[0])
     const [playStatus,setPlayStatus] = useState(false)
+    const [isLooping, setIsLooping] = useState(false);
+
     const [time,setTime]=useState({
         currentTime:{
             second:0,
@@ -67,6 +69,15 @@ const PlayerContextProvider=(props)=>{
             }
            })
     }
+    const loop = () => {
+        setIsLooping(prevState => !prevState);
+        if (!isLooping) {
+          audioRef.current.loop = true;
+        } else {
+          audioRef.current.loop = false;
+        }
+      };
+
     const seekSong=async(e)=>{
         audioRef.current.currentTime=((e.nativeEvent.offsetX/seekBg.current.offsetWidth)*audioRef.current.duration)
     }
@@ -127,7 +138,8 @@ const PlayerContextProvider=(props)=>{
         seekSong,
         songsData,
         albumsData,
-        volumeBgRef
+        volumeBgRef,
+        loop
     }
     return(
         <PlayerContext.Provider value={contextValue}>

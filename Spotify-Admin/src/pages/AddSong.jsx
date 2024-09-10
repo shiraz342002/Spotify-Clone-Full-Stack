@@ -118,7 +118,7 @@ const AddSong = () => {
       </div>
       <Button
           gradientMonochrome="success"
-          className="mb-10 text-lg py-3 px-2 cursor-pointer w-[150px]"
+          className="mb-10 text-lg py-3 px-3 cursor-pointer w-[150px]"
           type="submit"
         >
           Add Song
