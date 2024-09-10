@@ -23,4 +23,3 @@ const App = () => {
   )
 }
 export default App
-// https://youtu.be/KdGfhSpT6pc?t=20375

@@ -96,7 +96,6 @@ const PlayerContextProvider=(props)=>{
         } catch (error) {
           toast.error("Some Error occured")
         }
-        
       }
       const fetchAlbums = async () => {
         try {
@@ -108,14 +107,14 @@ const PlayerContextProvider=(props)=>{
           toast.error("Some Error occured")
         }
       }
-      useEffect(() => {
-        fetchAlbums()
-        fetchSongs()
-      }, [])
+    
     //   console.log(albumsData);
     //   console.log(songsData);
-      
 
+    useEffect(()=>{
+        fetchAlbums()
+        fetchSongs()
+    },[])
     const contextValue={
         audioRef,
         seekBar,

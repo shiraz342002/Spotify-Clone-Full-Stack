@@ -1,0 +1,60 @@
+[{
+  "_id": {
+    "$oid": "66d98f33bdeb914b2f3bcefa"
+  },
+  "name": "The Chronic",
+  "desc": "Album by Dr Dre released in 1991",
+  "bgColor": "#f5c002",
+  "image": "https://res.cloudinary.com/dgwmb7kav/image/upload/v1725534003/rnkeiq2xcndfincvbeac.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d99016c87ec27822e147fa"
+  },
+  "name": "All eyez on me",
+  "desc": "Tupac Goat ALbum",
+  "bgColor": "#de0909",
+  "image": "https://res.cloudinary.com/dgwmb7kav/image/upload/v1725534230/zxwo24q2x2lnyxgrbgow.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d990c2c279fd3f0d203b2e"
+  },
+  "name": "it's on dre 187um killa",
+  "desc": "Eazy Diss Dre",
+  "bgColor": "#2200fc",
+  "image": "https://res.cloudinary.com/dgwmb7kav/image/upload/v1725534401/goflszhyatwv1ukgfng9.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66dad49aae88127cf2edd49a"
+  },
+  "name": "You can't see me",
+  "desc": "Album by John Cena ",
+  "bgColor": "#ffb703",
+  "image": "https://res.cloudinary.com/dgwmb7kav/image/upload/v1725617306/jpkwxk5imculqbub6jk0.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66dad575ae88127cf2edd49c"
+  },
+  "name": "Music To Driveby",
+  "desc": "Album by CMW Mc Eiht",
+  "bgColor": "#00b4d8",
+  "image": "https://res.cloudinary.com/dgwmb7kav/image/upload/v1725617525/c56vbhkrq3tyqijji1pv.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66dad5ceae88127cf2edd49e"
+  },
+  "name": "AmeriKKKa's Most Wanted",
+  "desc": "Album by Ice Cube",
+  "bgColor": "#c1121f",
+  "image": "https://res.cloudinary.com/dgwmb7kav/image/upload/v1725617613/zc4n1nab9plyplxlpqkh.jpg",
+  "__v": 0
+}]

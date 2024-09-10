@@ -3,6 +3,7 @@ import { assets } from '../assets/assets'
 import axios from "axios"
 import { url } from '../App';
 import { toast } from 'react-toastify';
+
 const AddSong = () => {
   const [image, setImage] = useState(false);
   const [song, setSong] = useState(false);
@@ -25,12 +26,9 @@ const AddSong = () => {
       console.log(albumData);
       
     }
-    
     useEffect(() => {
       fetchAlbums()
     }, [])
-
-
   const onSubmitHandler = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -56,7 +54,6 @@ const AddSong = () => {
       toast.error("Some Error Occured")
     }
     setLoading(false)
-
   }
   return loading ? (
     <div className='grid place-items-center min-h-[80vh]'>
@@ -80,7 +77,6 @@ const AddSong = () => {
           </label>
         </div>
       </div>
-
       <div className='flex flex-col gap-2.5'>
         <p>Song Name</p>
         <input onChange={(e) => setName(e.target.value)} value={name} className='bg-transparent outline-green-600 border-2 p-2.5 border-gray-400 w-[max(40vw,250px)]' placeholder='Type here' type="text" />
@@ -90,7 +86,6 @@ const AddSong = () => {
         <p>Description</p>
         <input onChange={(e) => setDesc(e.target.value)} value={desc} className='bg-transparent outline-green-600 border-2 p-2.5 border-gray-400 w-[max(40vw,250px)]' placeholder='Type here' type="text" />
       </div>
-
       <div className='flex flex-col gap-2'>
         <p>Album</p>
         <select onChange={(e) => setAlbum(e.target.value)} defaultValue={album} className='bg-transparent outline-green-600 border-2 border-gray-400 p-2.5 w-[250px]'>

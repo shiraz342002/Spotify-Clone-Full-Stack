@@ -26,7 +26,7 @@ const Player = () => {
         <div className="flex items-center gap-5">
             <p>{time.currentTime.minute}:{time.currentTime.second}</p>
         <div ref={seekBg} onClick={(e)=>seekSong(e)}  className="w-[60vw] bg-gray-300 max-w-[500px] rounded-full cursor-pointer">
-            <hr ref={seekBar} className='h-1 border-none bg-green-700 w-0 rounded-full' />
+            <hr ref={seekBar} className='h-2 border-none bg-green-700 w-0 rounded-full' />
         </div>
         <p>{time.totalTime.minute}:{time.totalTime.second}</p>
         </div>

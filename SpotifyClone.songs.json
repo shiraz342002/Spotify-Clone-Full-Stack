@@ -1,0 +1,144 @@
+[{
+  "_id": {
+    "$oid": "66d9815e8c6dc1ab4176db53"
+  },
+  "name": "sajni",
+  "desc": "tvf Exams Video song",
+  "album": "karthik rao",
+  "image": "https://res.cloudinary.com/dgwmb7kav/image/upload/v1725530461/dvkmoqurzmkz7kpxdtgz.jpg",
+  "file": "https://res.cloudinary.com/dgwmb7kav/video/upload/v1725530460/swhelmfxv6o47icttii9.mp3",
+  "duration": "3:5",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d9819b8c6dc1ab4176db55"
+  },
+  "name": "Appetite for Destruction",
+  "desc": "Song by NWA",
+  "album": "Niggas4Life",
+  "image": "https://res.cloudinary.com/dgwmb7kav/image/upload/v1725530523/tkoqbcsqwejcvon2xlap.jpg",
+  "file": "https://res.cloudinary.com/dgwmb7kav/video/upload/v1725530522/nhchpyssmotx4mcl2rvv.mp3",
+  "duration": "3:29",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66daa8533d5bd8eb64755b09"
+  },
+  "name": "Nicety",
+  "desc": "Best song of 1990 pop era ",
+  "album": "none",
+  "image": "https://res.cloudinary.com/dgwmb7kav/image/upload/v1725605971/olsk3trvodfz5my3h561.jpg",
+  "file": "https://res.cloudinary.com/dgwmb7kav/video/upload/v1725605969/pzqxfxmtjalyoxkhugsu.mp3",
+  "duration": "3:27",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66daa9f73d5bd8eb64755b0b"
+  },
+  "name": "Samjhana",
+  "desc": "Best song from vital sings 1st album",
+  "album": "none",
+  "image": "https://res.cloudinary.com/dgwmb7kav/image/upload/v1725606390/mogtupel9yzo4kyx1evr.jpg",
+  "file": "https://res.cloudinary.com/dgwmb7kav/video/upload/v1725606389/bqceu8l9suzwlw0ka8nz.mp3",
+  "duration": "5:31",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66dac7d168c5b1be802aaff1"
+  },
+  "name": "Hum ha Pakistani",
+  "desc": "A song from 4th Album of Vital Signs",
+  "album": "none",
+  "image": "https://res.cloudinary.com/dgwmb7kav/image/upload/v1725614033/vzcvpks0ejabxmi3xaok.jpg",
+  "file": "https://res.cloudinary.com/dgwmb7kav/video/upload/v1725614031/vqt0uhpywr5ziztirwfa.mp3",
+  "duration": "4:32",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66dae2b9ae88127cf2ef3dca"
+  },
+  "name": "Hood Took me Under",
+  "desc": "By Mc Eiht",
+  "album": "Music To Driveby",
+  "image": "https://res.cloudinary.com/dgwmb7kav/image/upload/v1725620921/z62inyjvotvfc3thrsil.jpg",
+  "file": "https://res.cloudinary.com/dgwmb7kav/video/upload/v1725620920/mw5eahzr0yzl49sr9ccu.mp3",
+  "duration": "3:39",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66dae325ae88127cf2ef3dcc"
+  },
+  "name": "Hit em up",
+  "desc": "Diss to Biggie Smalls",
+  "album": "All eyez on me",
+  "image": "https://res.cloudinary.com/dgwmb7kav/image/upload/v1725621029/s6covedtrnnzbr9nitso.jpg",
+  "file": "https://res.cloudinary.com/dgwmb7kav/video/upload/v1725621028/xsdukj46jyqtb0wt2uxx.mp3",
+  "duration": "5:22",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66daf439552288dc3f2a7478"
+  },
+  "name": "Let me Ride",
+  "desc": "Song from Dr Dre album Chornic",
+  "album": "The Chronic",
+  "image": "https://res.cloudinary.com/dgwmb7kav/image/upload/v1725625400/fbn4iu6lzhhowhyuh7gq.jpg",
+  "file": "https://res.cloudinary.com/dgwmb7kav/video/upload/v1725625399/bsv2w4pxhb3jaw0tq0ww.mp3",
+  "duration": "4:20",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66daf490552288dc3f2a747e"
+  },
+  "name": "Dre Day",
+  "desc": "Diss on Eazy E",
+  "album": "The Chronic",
+  "image": "https://res.cloudinary.com/dgwmb7kav/image/upload/v1725625487/kwpm8krdozk2zvau1o55.jpg",
+  "file": "https://res.cloudinary.com/dgwmb7kav/video/upload/v1725625486/o5zcu5ih0ilr1sq1o1ay.mp3",
+  "duration": "4:41",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66daf503552288dc3f2a7696"
+  },
+  "name": "California Love",
+  "desc": "Song By Tupac and Dr Dre",
+  "album": "All eyez on me",
+  "image": "https://res.cloudinary.com/dgwmb7kav/image/upload/v1725625603/axapb7zdqwy0fmzat3zm.jpg",
+  "file": "https://res.cloudinary.com/dgwmb7kav/video/upload/v1725625601/czsjyrkzk6r7ypqu9cn9.mp3",
+  "duration": "6:52",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66daf556552288dc3f2a7698"
+  },
+  "name": "Real Compton City G's",
+  "desc": "Reply to Dr Dre Diss By Eazy E",
+  "album": "it's on dre 187um killa",
+  "image": "https://res.cloudinary.com/dgwmb7kav/image/upload/v1725625685/qmdsmeisylgw2vgvlwip.webp",
+  "file": "https://res.cloudinary.com/dgwmb7kav/video/upload/v1725625684/ouhdp2wi1hqrxxprovtj.mp3",
+  "duration": "4:46",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66daf5c4552288dc3f2a769a"
+  },
+  "name": "John Cena  my time is now",
+  "desc": "Cena Entrance song",
+  "album": "You can't see me",
+  "image": "https://res.cloudinary.com/dgwmb7kav/image/upload/v1725625796/btqgfayll5o0pni2iyrf.jpg",
+  "file": "https://res.cloudinary.com/dgwmb7kav/video/upload/v1725625795/zpy5lmuilqv6yilrcz2s.mp3",
+  "duration": "2:56",
+  "__v": 0
+}]
