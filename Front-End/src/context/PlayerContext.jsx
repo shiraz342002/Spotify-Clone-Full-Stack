@@ -8,6 +8,7 @@ const PlayerContextProvider=(props)=>{
 
     const audioRef =useRef()
     const seekBg =useRef()
+    const volumeBgRef = useRef(null);
     const seekBar = useRef()
     const url = "http://localhost:3000";
 
@@ -125,7 +126,8 @@ const PlayerContextProvider=(props)=>{
         next,
         seekSong,
         songsData,
-        albumsData
+        albumsData,
+        volumeBgRef
     }
     return(
         <PlayerContext.Provider value={contextValue}>

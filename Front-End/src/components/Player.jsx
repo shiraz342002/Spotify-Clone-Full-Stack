@@ -5,7 +5,7 @@ import { useState } from 'react'
 const Player = () => {
 
 
-  const {seekBar,seekBg,play,pause,playStatus,track,time,next,previous,seekSong,audioRef} = useContext(PlayerContext)
+  const {seekBar,seekBg,play,pause,playStatus,track,time,next,previous,seekSong,audioRef,volumeBgRef} = useContext(PlayerContext)
   const [muted, setMuted] = useState(false);
   const [volume, setVolume] = useState(1);
 
@@ -20,8 +20,17 @@ const Player = () => {
       setMuted(true);
     }
   }
-
-
+  const handleVolumeChange = (e) => {
+    const newVolume = e.nativeEvent.offsetX / e.currentTarget.offsetWidth;
+    setVolume(newVolume);
+    audioRef.current.volume = newVolume;
+    if (newVolume === 0) {
+      setMuted(true);
+    } else {
+      setMuted(false);
+    }
+  };
+  
   return track? (
     <div className='h-[10%] flex bg-black items-center justify-between text-white px-4 '>
       <div className='hidden lg:flex item-center gap-4 '>
@@ -56,7 +65,8 @@ const Player = () => {
         <img className='w-4 cursor-pointer' src={assets.queue_icon} alt="" />
         <img className='w-4 cursor-pointer' src={assets.speaker_icon} alt="" />
         <img onClick={toggleMute} className='w-4 cursor-pointer' src={muted?assets.volume_off:assets.volume_icon} alt="" />
-        <div className='w-20 bg-slate-50 h-1 cursor-pointer rounded'>
+        <div ref={volumeBgRef} onClick={handleVolumeChange} className='w-20 bg-slate-50 h-1 cursor-pointer rounded'>
+          <div className='h-1 bg-green-700 rounded' style={{ width: `${volume * 100}%` }}></div>
         </div>
         <img className='w-4 cursor-pointer' src={assets.mini_player_icon} alt="" />
         <img className='w-4 cursor-pointer' src={assets.zoom_icon} alt="" />
