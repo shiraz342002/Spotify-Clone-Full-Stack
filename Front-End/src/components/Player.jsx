@@ -22,6 +22,7 @@ const Player = () => {
   }
   const handleVolumeChange = (e) => {
     const newVolume = e.nativeEvent.offsetX / e.currentTarget.offsetWidth;
+    
     setVolume(newVolume);
     audioRef.current.volume = newVolume;
     if (newVolume === 0) {

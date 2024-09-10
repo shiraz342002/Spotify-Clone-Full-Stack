@@ -13,15 +13,13 @@ const AddSong = () => {
   const [album, setAlbum] = useState("none");
   const [loading, setLoading] = useState(false); 
   const [albumData, setAlbumData] = useState([]);
+
   const validateForm = () => {
     if (!name) {
       toast.error('Song name is required');
       return false;
     }
-    if (!desc) {
-      toast.error('Song description is required');
-      return false;
-    }
+    
     if (!image) {
       toast.error('Song cover image is required');
       return false;

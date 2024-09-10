@@ -3,7 +3,6 @@ import albumModel from "../models/album.model.js"
 const addAlbum= async(req,res)=>{
    
 try{
-
     const name =req.body.name 
     const desc =req.body.desc 
     const bgColor =req.body.bgColor 
