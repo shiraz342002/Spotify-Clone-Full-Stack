@@ -107,8 +107,6 @@ const PlayerContextProvider=(props)=>{
           toast.error("Some Error occured")
         }
       }
-
-
     useEffect(()=>{
         fetchAlbums()
         fetchSongs()

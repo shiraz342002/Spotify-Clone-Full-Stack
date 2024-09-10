@@ -1,8 +1,27 @@
 import React, { useContext } from 'react'
 import {assets} from "../assets/frontend-assets/assets"
 import { PlayerContext } from '../context/PlayerContext'
+import { useState } from 'react'
 const Player = () => {
-  const {seekBar,seekBg,play,pause,playStatus,track,time,next,previous,seekSong} = useContext(PlayerContext)
+
+
+  const {seekBar,seekBg,play,pause,playStatus,track,time,next,previous,seekSong,audioRef} = useContext(PlayerContext)
+  const [muted, setMuted] = useState(false);
+  const [volume, setVolume] = useState(1);
+
+  const toggleMute=()=>{
+    if(muted){
+      setVolume(1)
+      audioRef.current.volume=1
+      setMuted(false)
+    }else{
+      setVolume(0);
+      audioRef.current.volume = 0;
+      setMuted(true);
+    }
+  }
+
+
   return track? (
     <div className='h-[10%] flex bg-black items-center justify-between text-white px-4 '>
       <div className='hidden lg:flex item-center gap-4 '>
@@ -32,15 +51,15 @@ const Player = () => {
         </div>
       </div>
       <div className='hidden lg:flex items-center gap-3 opacity-75 '>
-        <img className='w-4' src={assets.plays_icon} alt="" />
-        <img className='w-4' src={assets.mic_icon} alt="" />
-        <img className='w-4' src={assets.queue_icon} alt="" />
-        <img className='w-4' src={assets.speaker_icon} alt="" />
-        <img className='w-4' src={assets.volume_icon} alt="" />
+        <img className='w-4 cursor-pointer' src={assets.plays_icon} alt="" />
+        <img className='w-4 cursor-pointer' src={assets.mic_icon} alt="" />
+        <img className='w-4 cursor-pointer' src={assets.queue_icon} alt="" />
+        <img className='w-4 cursor-pointer' src={assets.speaker_icon} alt="" />
+        <img onClick={toggleMute} className='w-4 cursor-pointer' src={muted?assets.volume_off:assets.volume_icon} alt="" />
         <div className='w-20 bg-slate-50 h-1 cursor-pointer rounded'>
         </div>
-        <img className='w-4' src={assets.mini_player_icon} alt="" />
-        <img className='w-4' src={assets.zoom_icon} alt="" />
+        <img className='w-4 cursor-pointer' src={assets.mini_player_icon} alt="" />
+        <img className='w-4 cursor-pointer' src={assets.zoom_icon} alt="" />
       </div>
     </div>
   ):null
