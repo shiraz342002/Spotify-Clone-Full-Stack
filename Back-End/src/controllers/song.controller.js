@@ -23,6 +23,7 @@ try{
     res.json({success:true,message:"Song Added"})
 }catch(err){
 res.json({success:false})
+
 }
 }
 const listSong=async(req,res)=>{

@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import {assets} from "../assets/frontend-assets/assets"
 import { PlayerContext } from '../context/PlayerContext'
 import { useState } from 'react'
+import { toast } from 'react-toastify'
 const Player = () => {
 
 
@@ -20,15 +21,26 @@ const Player = () => {
       setMuted(true);
     }
   }
-  const handleVolumeChange = (e) => {
-    const newVolume = e.nativeEvent.offsetX / e.currentTarget.offsetWidth;
-    
+  
+  const handleVolumeChange1=(e)=>{
+    const newVolume = e.nativeEvent.offsetX/e.currentTarget.offsetWidth;
     setVolume(newVolume);
-    audioRef.current.volume = newVolume;
-    if (newVolume === 0) {
-      setMuted(true);
+    audioRef.current.volume=newVolume;
+    if(newVolume===0){
+      setMuted(true)
+    }else{
+      setMuted(false)
+    }
+  }
+  const fullscreen = () => {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen().catch(err => {
+        toast.error(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+      });
     } else {
-      setMuted(false);
+      document.exitFullscreen().catch(err => {
+        toast.error(`Error attempting to exit full-screen mode: ${err.message} (${err.name})`);
+      });
     }
   };
   
@@ -66,11 +78,11 @@ const Player = () => {
         <img className='w-4 cursor-pointer' src={assets.queue_icon} alt="" />
         <img className='w-4 cursor-pointer' src={assets.speaker_icon} alt="" />
         <img onClick={toggleMute} className='w-4 cursor-pointer' src={muted?assets.volume_off:assets.volume_icon} alt="" />
-        <div ref={volumeBgRef} onClick={handleVolumeChange} className='w-20 bg-slate-50 h-1 cursor-pointer rounded'>
+        <div ref={volumeBgRef} onClick={handleVolumeChange1} className='w-20 bg-slate-50 h-1 cursor-pointer rounded'>
           <div className='h-1 bg-green-700 rounded' style={{ width: `${volume * 100}%` }}></div>
         </div>
-        <img className='w-4 cursor-pointer' src={assets.mini_player_icon} alt="" />
-        <img className='w-4 cursor-pointer' src={assets.zoom_icon} alt="" />
+        <img  className='w-4 cursor-pointer' src={assets.mini_player_icon} alt="" />
+        <img onClick={fullscreen} className='w-4 cursor-pointer' src={assets.zoom_icon} alt="" />
       </div>
     </div>
   ):null
