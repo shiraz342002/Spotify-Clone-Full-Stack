@@ -50,11 +50,21 @@
 },
 {
   "_id": {
-    "$oid": "66dad5ceae88127cf2edd49e"
+    "$oid": "66dfd45e2610ed34b75f8d94"
   },
-  "name": "AmeriKKKa's Most Wanted",
-  "desc": "Album by Ice Cube",
-  "bgColor": "#c1121f",
-  "image": "https://res.cloudinary.com/dgwmb7kav/image/upload/v1725617613/zc4n1nab9plyplxlpqkh.jpg",
+  "name": "Aitebar",
+  "desc": "Released by Vital Signs in 1993",
+  "bgColor": "#0077b6",
+  "image": "https://res.cloudinary.com/dgwmb7kav/image/upload/v1725944923/eyehhw4fwjttxm8ujehs.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66dff7e7af981169770afd22"
+  },
+  "name": "ICC CWC",
+  "desc": "Collection of CWC songs",
+  "bgColor": "#000000",
+  "image": "https://res.cloudinary.com/dgwmb7kav/image/upload/v1725954020/m8sno2skjxmzzrseqlrw.webp",
   "__v": 0
 }]

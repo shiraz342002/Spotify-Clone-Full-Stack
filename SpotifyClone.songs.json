@@ -141,4 +141,64 @@
   "file": "https://res.cloudinary.com/dgwmb7kav/video/upload/v1725625795/zpy5lmuilqv6yilrcz2s.mp3",
   "duration": "2:56",
   "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66dfd5e32610ed34b75f91a2"
+  },
+  "name": "Khamosh ho",
+  "desc": "Famous Vital Signs song sang by Junaid Jamshed",
+  "album": "Aitebar",
+  "image": "https://res.cloudinary.com/dgwmb7kav/image/upload/v1725945312/lpv2itzz3pz2kht9gifm.jpg",
+  "file": "https://res.cloudinary.com/dgwmb7kav/video/upload/v1725945311/pmamsysdlp4e7z1fvxzn.mp3",
+  "duration": "5:23",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66dfe7432610ed34b7613e36"
+  },
+  "name": "Nicety",
+  "desc": "Song by Michelle",
+  "album": "none",
+  "image": "https://res.cloudinary.com/dgwmb7kav/image/upload/v1725949760/qyqeib5uhebfeht5ogbo.jpg",
+  "file": "https://res.cloudinary.com/dgwmb7kav/video/upload/v1725949759/gsk9s9fzspnpv8h2fbfo.mp3",
+  "duration": "3:27",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66dff8cfaf981169770aff8a"
+  },
+  "name": "2015 CWC theme song",
+  "desc": "Australia WC Sog",
+  "album": "ICC CWC",
+  "image": "https://res.cloudinary.com/dgwmb7kav/image/upload/v1725954252/nfjwomjuwptpbs6o3iqz.webp",
+  "file": "https://res.cloudinary.com/dgwmb7kav/video/upload/v1725954251/ublanvdpmypf5vje4bav.mp3",
+  "duration": "3:28",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66dff903af981169770aff90"
+  },
+  "name": "2019 CWC theme Song",
+  "desc": "Loryn Stand By",
+  "album": "ICC CWC",
+  "image": "https://res.cloudinary.com/dgwmb7kav/image/upload/v1725954304/qked2uijvwdnl4ejm79y.webp",
+  "file": "https://res.cloudinary.com/dgwmb7kav/video/upload/v1725954303/nm6cszknoi2smpdq76ro.mp3",
+  "duration": "3:20",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66e0242f8f938da526af0237"
+  },
+  "name": "2019 CWC theme song",
+  "desc": "Loryn Stand By ",
+  "album": "ICC CWC",
+  "image": "https://res.cloudinary.com/dgwmb7kav/image/upload/v1725965356/u4dcg7nibtuxpprxcwyt.webp",
+  "file": "https://res.cloudinary.com/dgwmb7kav/video/upload/v1725965355/cy51uqih5yvqz6u5d05d.mp3",
+  "duration": "3:20",
+  "__v": 0
 }]
